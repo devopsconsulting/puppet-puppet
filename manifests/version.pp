@@ -1,11 +1,9 @@
-# last tested version : 2.7.19
 class puppet::version {
     package {"puppet-common":
-        ensure => "2.7.19-1puppetlabs2"
-    }
+        ensure => "latest"
+    } ->
     package {"puppet":
-        ensure => "2.7.19-1puppetlabs2",
-        require => Package["puppet-common"],
+        ensure => "latest",
     }
     package {"facter":
         ensure => "latest",
